@@ -1,0 +1,10 @@
+precision = 0;
+recall = 0 ;
+accuracy = 0;
+sum = 0;
+s = sum(conf_mat);
+for i = 1 : length(conf_mat)
+    sum = sum + conf_mat(i,:)
+end
+
+disp(precision);

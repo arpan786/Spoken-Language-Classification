@@ -1,0 +1,24 @@
+clc;
+clear all;
+Fs=8000;
+clear y1 y2 y3;
+display('record 1st language');
+Dir = 'Train\english\';
+files = dir(fullfile(Dir, '*.wav'));
+X = [];
+a = [];
+%pause();
+%---------------------------------------------------------------------------
+k = 1;
+for j = 1:length(files)
+    n = files(j).name;
+    disp(n);
+[x,fs]=wavread(fullfile(Dir, files(j).name));
+[a] = reshape(LPC(x),1,;
+%wavplay(x,Fs);
+X(k,:)=reshape(a,1,228);
+Y(k,:)=input('enter the language 1-  ');
+save('lpcdata.mat','X','Y');
+
+end
+%_-------------------------------------------------------------------------

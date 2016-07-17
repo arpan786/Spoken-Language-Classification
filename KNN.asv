@@ -1,0 +1,11 @@
+function [ dist] = KNN(X1,X)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+dist = [0] ;
+%X = double(X);
+min = 0;
+[IDX,D] = knnsearch(X,X1);
+    
+
+end
+
